@@ -8,10 +8,14 @@ repositories {
     mavenCentral()
 }
 
+bootJar {
+    enabled = false
+}
+
 dependencies {
     implementation project(':domain')
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-//    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     runtimeOnly 'mysql:mysql-connector-java'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
