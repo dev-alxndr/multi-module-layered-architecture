@@ -9,6 +9,10 @@ repositories {
     mavenCentral()
 }
 
+bootJar {
+    enabled = false
+}
+
 dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'

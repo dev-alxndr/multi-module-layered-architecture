@@ -21,9 +21,9 @@ public class BoardController {
 
 	@GetMapping("/boards")
 	public ResponseEntity boards() {
-		log.error("controller");
+		log.debug("controller");
 		boardFacade.getBoards();
-		return ResponseEntity.ok().build();
+		return ResponseEntity.ok().body("Hello");
 	}
 
 }
